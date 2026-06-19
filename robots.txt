@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tioh-academy.github.io/sitemap.xml
