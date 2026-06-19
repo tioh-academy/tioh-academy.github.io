@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Notre impact — Tioh Academy</title>
+  <meta name="description" content="Découvrez l'impact de Tioh Academy : actions éducatives, ressources gratuites, ateliers, vulgarisation scientifique, mathématiques accessibles et engagement pour les jeunes." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --violet-fonce: #22013F;
+      --violet: #5B21B6;
+      --violet-doux: #7d3c98;
+      --lavande: #F3E8FF;
+      --fond: #FBF7FF;
+      --or: #F4C542;
+      --turquoise: #0EA5A6;
+      --vert: #10B981;
+      --rose: #E58BB6;
+      --texte: #21152E;
+      --gris: #665B73;
+      --blanc: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      color: var(--texte);
+      background:
+        radial-gradient(circle at top left, rgba(244,197,66,0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(14,165,166,0.13), transparent 28%),
+        var(--fond);
+    }
+
+    header {
+      background: var(--blanc);
+      border-bottom: 1px solid rgba(34,1,63,0.08);
+      box-shadow: 0 4px 18px rgba(34,1,63,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.45rem;
+      color: var(--violet-fonce);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav li { margin: 0; padding: 0; }
+
+    nav a {
+      display: inline-block;
+      color: var(--violet-fonce);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lavande);
+      color: var(--violet);
+    }
+
+    .hero-impact {
+      background:
+        linear-gradient(135deg, rgba(34,1,63,0.94), rgba(91,33,182,0.86)),
+        url('images/hero-impact.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 48px 20px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-impact::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: var(--or);
+      top: -90px;
+      left: -70px;
+      opacity: 0.45;
+    }
+
+    .hero-impact::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: var(--turquoise);
+      right: -70px;
+      bottom: -95px;
+      opacity: 0.42;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.24);
+      color: var(--or);
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.86rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-impact h1 {
+      margin: 0 0 10px;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.85rem, 4vw, 2.8rem);
+      line-height: 1.1;
+    }
+
+    .hero-impact p {
+      max-width: 740px;
+      margin: 0 auto;
+      line-height: 1.65;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: clamp(1.35rem, 2.6vw, 2rem);
+    }
+
+    .section-title p {
+      margin: 0 auto;
+      max-width: 820px;
+      color: var(--gris);
+      line-height: 1.7;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .metric-card {
+      background: white;
+      border-radius: 18px;
+      padding: 20px 16px;
+      text-align: center;
+      border: 1px solid rgba(91,33,182,0.10);
+      box-shadow: 0 10px 26px rgba(34,1,63,0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(34,1,63,0.12);
+    }
+
+    .metric-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background: var(--lavande);
+      color: var(--violet);
+      font-size: 1.35rem;
+    }
+
+    .metric-card strong {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: 1.35rem;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .metric-card span {
+      display: block;
+      color: var(--gris);
+      font-size: 0.93rem;
+      line-height: 1.4;
+    }
+
+    .impact-block {
+      background: white;
+      border-radius: 24px;
+      padding: 26px;
+      border: 1px solid rgba(91,33,182,0.08);
+      box-shadow: 0 12px 32px rgba(34,1,63,0.08);
+      margin-top: 26px;
+    }
+
+    .impact-block h3 {
+      margin: 0 0 10px;
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: 1.35rem;
+    }
+
+    .impact-block p {
+      color: var(--gris);
+      line-height: 1.75;
+      margin: 0 0 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid rgba(91,33,182,0.08);
+      box-shadow: 0 8px 24px rgba(34,1,63,0.08);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: var(--lavande);
+    }
+
+    .gallery figcaption {
+      padding: 12px;
+      font-weight: 800;
+      color: var(--violet-fonce);
+      text-align: center;
+      background: #fbf8ff;
+    }
+
+    .digital-impact {
+      background: linear-gradient(135deg, var(--violet-fonce), var(--violet));
+      color: white;
+      border-radius: 24px;
+      padding: 30px 24px;
+      margin-top: 26px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .digital-impact::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -90px;
+      top: -95px;
+      border-radius: 50%;
+      background: var(--or);
+      opacity: 0.45;
+    }
+
+    .digital-impact h3,
+    .digital-impact p,
+    .social-impact {
+      position: relative;
+      z-index: 2;
+    }
+
+    .digital-impact h3 {
+      margin: 0 0 10px;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.45rem;
+    }
+
+    .digital-impact p {
+      max-width: 800px;
+      margin: 0 0 18px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .social-impact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social-impact a {
+      display: inline-block;
+      background: white;
+      color: var(--violet-fonce);
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .social-impact a:hover {
+      transform: translateY(-2px);
+      background: var(--or);
+      color: #2b2304;
+    }
+
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .action-card {
+      background: #fbf8ff;
+      border: 1px solid rgba(91,33,182,0.10);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .action-card h4 {
+      margin: 0 0 8px;
+      color: var(--violet-fonce);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.05rem;
+    }
+
+    .action-card p {
+      margin: 0;
+      color: var(--gris);
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+
+    .cta {
+      text-align: center;
+      background: white;
+      border-radius: 24px;
+      padding: 28px 20px;
+      border: 1px solid rgba(91,33,182,0.08);
+      box-shadow: 0 12px 32px rgba(34,1,63,0.08);
+      margin-top: 28px;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: 1.45rem;
+    }
+
+    .cta p {
+      margin: 0 auto 18px;
+      max-width: 780px;
+      color: var(--gris);
+      line-height: 1.7;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--or);
+      color: #2b2304;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 11px 18px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #d9a91e;
+    }
+
+    .btn.secondary {
+      background: var(--violet-fonce);
+      color: white;
+    }
+
+    .btn.secondary:hover {
+      background: var(--violet);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      color: var(--gris);
+      border-top: 1px solid rgba(34,1,63,0.08);
+    }
+
+    @media (max-width: 900px) {
+      .metrics-grid,
+      .gallery,
+      .actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      nav a {
+        padding: 7px 9px;
+        font-size: 0.86rem;
+      }
+
+      .hero-impact {
+        padding: 36px 16px;
+      }
+
+      .section {
+        padding: 30px 16px;
+      }
+
+      .metrics-grid,
+      .gallery,
+      .actions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-block,
+      .digital-impact,
+      .cta {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Tioh Academy</h1>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="index.html#missions">Missions</a></li>
+          <li><a href="activites.html">Activités</a></li>
+          <li><a href="impact.html" class="active">Impact</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-impact">
+    <div class="hero-inner">
+      <div class="eyebrow">🌍 IMPACT & ENGAGEMENT</div>
+      <h1>Notre impact</h1>
+      <p>
+        Semer la passion des mathématiques, éveiller les esprits et créer des ponts
+        entre l’école, les familles, les sciences et les communautés.
+      </p>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>Quelques chiffres clés</h2>
+        <p>
+          Tioh Academy combine actions sur le terrain, ressources gratuites, contenus numériques
+          et projets éducatifs pour rendre les mathématiques plus accessibles. Les activités ont déjà touché directement plus de 1 000 élèves et étudiants.
+        </p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">👩🏾‍🎓</div>
+          <strong>1 000+</strong>
+          <span>élèves et étudiants touchés directement</span>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">🌍</div>
+          <strong>3 pays</strong>
+          <span>Cameroun • France • Canada</span>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">📱</div>
+          <strong>250k+</strong>
+          <span>abonnés cumulés sur les réseaux</span>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">📚</div>
+          <strong>24k+</strong>
+          <span>téléchargements PDF par mois</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="impact-block">
+        <h3>🟣 Actions sur le terrain</h3>
+        <p>
+          Depuis 2019, Tioh Academy développe des actions d’éducation, de vulgarisation
+          et d’orientation scientifique auprès des jeunes. Ces interventions montrent que les mathématiques
+          ne sont pas seulement une matière scolaire : elles servent à comprendre le monde, les données,
+          l’intelligence artificielle, la santé, l’environnement et la vie quotidienne.
+        </p>
+        <p>
+          Les activités menées dans les écoles, bibliothèques et espaces communautaires favorisent
+          la confiance, la curiosité et le rêve scientifique, en particulier chez les jeunes qui ne se sentent
+          pas toujours représentés dans les sciences.
+        </p>
+
+        <div class="gallery">
+          <figure>
+            <img src="images/babete2021.png" alt="Atelier éducatif à Babété au Cameroun">
+            <figcaption>Babété 🇨🇲</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/winnipeg2024.png" alt="Atelier éducatif à Winnipeg au Canada">
+            <figcaption>Winnipeg 🇨🇦</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/nice2022.png" alt="Atelier éducatif à Nice en France">
+            <figcaption>Nice 🇫🇷</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="impact-block">
+        <h3>🎯 Axes d’engagement</h3>
+        <div class="actions-grid">
+          <div class="action-card">
+            <h4>Réconcilier</h4>
+            <p>Changer la perception des mathématiques et redonner confiance aux élèves, parents et adultes.</p>
+          </div>
+
+          <div class="action-card">
+            <h4>Inspirer</h4>
+            <p>Présenter des parcours scientifiques accessibles, en particulier des femmes et personnes issues de la diversité.</p>
+          </div>
+
+          <div class="action-card">
+            <h4>Orienter</h4>
+            <p>Accompagner les jeunes vers les STEM grâce à des ateliers, ressources, projets et webinaires.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="digital-impact">
+        <h3>💻 Impact numérique</h3>
+        <p>
+          Les vidéos, documents et publications de Tioh Academy permettent de toucher une communauté internationale.
+          Les ressources en ligne prolongent les actions sur le terrain et rendent les mathématiques accessibles
+          à des élèves, parents, enseignants et étudiants qui n’ont pas toujours accès à un accompagnement personnalisé.
+        </p>
+
+        <div class="social-impact">
+          <a href="https://www.youtube.com/@tiohacademy" target="_blank" rel="noopener noreferrer">📺 YouTube</a>
+          <a href="https://www.facebook.com/profile.php?id=100078012906116&locale=fr_CA" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+          <a href="https://www.linkedin.com/in/clotilde-djuikem-8186901a0/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+          <a href="ressources.html">📚 Ressources</a>
+        </div>
+      </div>
+
+      <section class="cta">
+        <h2>🤝 Rejoindre ou soutenir l’initiative</h2>
+        <p>
+          Vous souhaitez contribuer à la diffusion des sciences, soutenir une activité éducative,
+          devenir bénévole ou accompagner la Bourse d’excellence Tioh Academy ?
+        </p>
+
+        <div class="btn-row">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScHEfrVy63MIPnuegxBap_CvBqfvAl8YbwDRBYT7wMsf_8eQA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn">
+            🌟 Devenir bénévole
+          </a>
+          <a href="index.html#contact" class="btn secondary">
+            Nous contacter
+          </a>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Tioh Academy — Inspirer • Innover • Orienter</p>
+  </footer>
+
+</body>
+</html>
