@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos activités — Tioh Academy</title>
+  <meta name="description" content="Activités éducatives de Tioh Academy : webinaires, ateliers, défis mathématiques, vulgarisation scientifique et inspiration pour les enfants et les familles." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       Styles uniquement pour activites.html
+       Tu peux remplacer seulement cette page sans toucher
+       aux autres fichiers du site.
+    ===================================================== */
+
+    :root {
+      --tioh-navy: #22013f;
+      --tioh-dark: #21152e;
+      --tioh-purple: #5b21b6;
+      --tioh-purple-soft: #7b5cd6;
+      --tioh-lavender: #f3e8ff;
+      --tioh-light: #fbf7ff;
+      --tioh-gold: #f4c542;
+      --tioh-gold-dark: #b77912;
+      --tioh-teal: #0ea5a6;
+      --tioh-pink: #e58bb6;
+      --white: #ffffff;
+      --muted: #665b73;
+      --shadow: 0 24px 70px rgba(34, 1, 63, 0.14);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(167, 139, 250, 0.22), transparent 34rem),
+        radial-gradient(circle at 85% 25%, rgba(244, 197, 66, 0.20), transparent 26rem),
+        var(--tioh-light);
+    }
+
+    /* Hero page activités */
+    .activities-hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      padding: 92px 0 72px;
+      background:
+        linear-gradient(135deg, rgba(34, 1, 63, 0.94), rgba(91, 33, 182, 0.86)),
+        url('images/hero-activites.jpg') center/cover no-repeat;
+      isolation: isolate;
+    }
+
+    .activities-hero::before,
+    .activities-hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      z-index: -1;
+    }
+
+    .activities-hero::before {
+      width: 330px;
+      height: 330px;
+      right: -80px;
+      top: -80px;
+      background: rgba(244, 197, 66, 0.28);
+    }
+
+    .activities-hero::after {
+      width: 230px;
+      height: 230px;
+      left: 8%;
+      bottom: -95px;
+      background: rgba(14, 165, 166, 0.26);
+    }
+
+    .activities-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      align-items: center;
+      gap: 38px;
+    }
+
+    .activities-hero h1 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.15rem, 5vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .activities-hero h1 span {
+      color: var(--tioh-gold);
+      display: block;
+    }
+
+    .activities-hero .hero-lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      font-size: 1.13rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .activity-date-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.20);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    .activity-date-card .badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .activity-date-card h2 {
+      margin: 0 0 14px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.65rem;
+      line-height: 1.15;
+    }
+
+    .activity-date-card p {
+      margin: 0 0 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--tioh-gold);
+      color: var(--tioh-dark);
+      font-weight: 800;
+      font-size: 0.94rem;
+    }
+
+    .activity-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .activity-meta div {
+      border-radius: 18px;
+      padding: 14px 10px;
+      background: rgba(255, 255, 255, 0.13);
+      text-align: center;
+    }
+
+    .activity-meta strong {
+      display: block;
+      color: var(--tioh-gold);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+    }
+
+    .activity-meta span {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* Webinaire */
+    .webinar-section {
+      position: relative;
+      margin-top: -28px;
+      z-index: 2;
+    }
+
+    .featured-webinar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 28px;
+      align-items: stretch;
+      background: var(--white);
+      border: 1px solid rgba(91, 33, 182, 0.12);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 38px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .featured-webinar::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -80px;
+      top: -85px;
+      border-radius: 50%;
+      background: rgba(244, 197, 66, 0.24);
+    }
+
+    .webinar-copy,
+    .speaker-panel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .webinar-copy h2,
+    .section-title h2,
+    .speaker-panel h3,
+    .future-card h3,
+    .impact-strip h2 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--tioh-navy);
+    }
+
+    .webinar-copy h2 {
+      font-size: clamp(1.85rem, 3.5vw, 3rem);
+      line-height: 1.08;
+      margin: 10px 0 18px;
+      letter-spacing: -0.035em;
+    }
+
+    .webinar-copy > p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 22px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 22px 0 24px;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      background: var(--tioh-light);
+      border: 1px solid rgba(91, 33, 182, 0.10);
+      border-radius: 16px;
+    }
+
+    .check-list li span {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--tioh-purple), var(--tioh-teal));
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .speaker-panel {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background:
+        linear-gradient(160deg, rgba(34, 1, 63, 0.96), rgba(91, 33, 182, 0.90)),
+        var(--tioh-navy);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .speaker-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .speaker-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .speaker-panel h3 {
+      color: var(--tioh-gold);
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .speaker-panel p {
+      margin: 0;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .speaker-panel strong {
+      color: var(--white);
+    }
+
+    .mini-note {
+      margin-top: auto;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.10);
+      border-left: 4px solid var(--tioh-gold);
+      font-size: 0.93rem;
+    }
+
+    /* Étapes */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .program-card {
+      background: var(--white);
+      border: 1px solid rgba(91, 33, 182, 0.12);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 18px 40px rgba(34, 1, 63, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 55px rgba(34, 1, 63, 0.13);
+    }
+
+    .program-card span {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--tioh-lavender);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+
+    .program-card h3 {
+      margin: 0 0 8px;
+      font-family: 'Poppins', sans-serif;
+      color: var(--tioh-purple);
+    }
+
+    .program-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* À venir */
+    .future-section {
+      background: linear-gradient(135deg, var(--tioh-navy), var(--tioh-purple));
+      color: var(--white);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .future-section::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -110px;
+      bottom: -120px;
+      border-radius: 50%;
+      background: rgba(244, 197, 66, 0.18);
+    }
+
+    .future-section .section-heading h2,
+    .future-section .section-heading p,
+    .future-section .eyebrow {
+      color: var(--white);
+    }
+
+    .future-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .future-card {
+      padding: 24px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+    }
+
+    .future-card h3 {
+      color: var(--tioh-gold);
+      margin: 0 0 8px;
+    }
+
+    .future-card p {
+      color: rgba(255,255,255,0.84);
+      margin: 0;
+    }
+
+    /* Impact / CTA */
+    .impact-strip {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 22px;
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      border: 1px solid rgba(91, 33, 182, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .impact-strip h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.55rem, 3vw, 2.45rem);
+    }
+
+    .impact-strip p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .activity-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .activities-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .activities-socials a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: var(--tioh-lavender);
+      color: var(--tioh-purple);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .activities-socials a:hover {
+      background: var(--tioh-purple);
+      color: var(--white);
+    }
+
+    @media (max-width: 980px) {
+      .activities-hero-grid,
+      .featured-webinar,
+      .impact-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .program-grid,
+      .future-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .activities-hero {
+        padding: 70px 0 56px;
+      }
+
+      .activity-meta,
+      .program-grid,
+      .future-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-webinar,
+      .impact-strip {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#accueil" aria-label="Accueil Tioh Academy">
+        <span class="brand-mark">T</span>
+        <span>
+          <strong>Tioh Academy</strong>
+          <small>Inspirer • Innover • Orienter</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#missions">Mission</a>
+        <a href="index.html#bourse">Bourse</a>
+        <a href="index.html#impact">Impact</a>
+        <a class="active" href="activites.html">Activités</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="activities-hero">
+      <div class="container activities-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Webinaires • Ateliers • STEM • Inspiration</p>
+          <h1>Nos activités éducatives <span>pour apprendre autrement.</span></h1>
+          <p class="hero-lead">
+            Des expériences interactives pour aider les enfants, les familles et les jeunes à découvrir les mathématiques,
+            les sciences et les parcours STEM avec confiance, curiosité et imagination.
+          </p>
+          <div class="activity-actions">
+            <a class="btn btn-primary" href="#webinaire">Voir le webinaire</a>
+            <a class="btn btn-secondary" href="index.html#bourse">Soutenir la bourse</a>
+          </div>
+        </div>
+
+        <aside class="activity-date-card reveal" aria-label="Prochain webinaire Tioh Academy">
+          <div class="badge-row">
+            <span class="badge badge-gold">TAW1</span>
+            <span class="badge">Activité gratuite</span>
+          </div>
+          <h2>Les pionnières des sciences</h2>
+          <p>Un webinaire pour montrer aux enfants que la curiosité peut mener jusqu’aux STEM.</p>
+          <span class="date-pill">📅 31 octobre 2025 — 16h GMT</span>
+          <div class="activity-meta">
+            <div><strong>Enfants</strong><span>quiz & mini-défis</span></div>
+            <div><strong>Parents</strong><span>conseils & échanges</span></div>
+            <div><strong>En ligne</strong><span>sur inscription</span></div>
+          </div>
+          <a class="btn btn-full" href="https://docs.google.com/forms/d/e/1FAIpQLSdXNtFnPAZ7CL9iQlbw2U0p4MJKfTzaOCSV3G_324K0WNvIiQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">💫 Inscrire mon enfant</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="webinaire" class="section webinar-section">
+      <div class="container">
+        <article class="featured-webinar reveal">
+          <div class="webinar-copy">
+            <p class="eyebrow">Tioh Academy Webinaire</p>
+            <h2>TAW1 : Quand la curiosité mène jusqu’aux STEM</h2>
+            <p>
+              Ce webinaire est conçu pour les enfants, mais aussi pour leurs parents curieux. Ensemble,
+              ils découvrent comment des femmes extraordinaires ont marqué l’histoire de la science,
+              et comment une question simple peut devenir le début d’une vocation.
+            </p>
+
+            <ul class="check-list">
+              <li><span>1</span><div><strong>Histoires inspirantes</strong><br>Découvrir des pionnières des sciences, des mathématiques et de l’exploration.</div></li>
+              <li><span>2</span><div><strong>Jeux et mini-défis</strong><br>Apprendre par des questions, des observations et de petits raisonnements mathématiques.</div></li>
+              <li><span>3</span><div><strong>Dialogue avec les parents</strong><br>Donner des pistes simples pour nourrir la curiosité scientifique à la maison.</div></li>
+            </ul>
+
+            <div class="activity-actions">
+              <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdXNtFnPAZ7CL9iQlbw2U0p4MJKfTzaOCSV3G_324K0WNvIiQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">💫 Je veux inscrire mon enfant</a>
+              <a class="btn btn-secondary" href="https://www.youtube.com/@tiohacademy" target="_blank" rel="noopener noreferrer">Voir YouTube</a>
+            </div>
+          </div>
+
+          <aside class="speaker-panel" aria-label="Intervenante du webinaire">
+            <div class="speaker-photo">
+              <img src="images/intervenantes/clotilde_djuikem.jpeg" alt="Clotilde Djuikem, fondatrice de Tioh Academy" onerror="this.closest('.speaker-photo').style.display='none';">
+            </div>
+            <div>
+              <h3>Mon parcours et ma mission 💜</h3>
+              <p>
+                Avec <strong>Clotilde Djuikem</strong>, fondatrice de Tioh Academy, les enfants embarquent dans un voyage
+                inspirant à travers les nombres, les modèles, les étoiles et les histoires de femmes scientifiques.
+              </p>
+            </div>
+            <p>
+              Le message central : <strong>la science appartient à tout le monde</strong>, et les filles ont toute leur place
+              dans les laboratoires, les observatoires, les salles de classe et les métiers d’avenir.
+            </p>
+            <div class="mini-note">
+              Objectif : inspirer une génération de jeunes curieuses, audacieuses et capables de se projeter dans les STEM.
+            </div>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Ce que les enfants vont vivre</p>
+          <h2>Une activité courte, claire, vivante et interactive.</h2>
+          <p>
+            L’objectif n’est pas seulement de transmettre une information, mais de créer un déclic : montrer que les sciences
+            commencent souvent par une question, une curiosité ou une observation du monde.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card reveal">
+            <span>🌟</span>
+            <h3>S’inspirer</h3>
+            <p>Découvrir des parcours de femmes scientifiques et comprendre que les modèles existent.</p>
+          </article>
+          <article class="program-card reveal">
+            <span>🧠</span>
+            <h3>Réfléchir</h3>
+            <p>Résoudre de petits défis et voir comment les mathématiques aident à raisonner.</p>
+          </article>
+          <article class="program-card reveal">
+            <span>🚀</span>
+            <h3>Rêver</h3>
+            <p>Relier les sciences à l’espace, aux technologies, à la vie quotidienne et aux métiers.</p>
+          </article>
+          <article class="program-card reveal">
+            <span>💬</span>
+            <h3>Échanger</h3>
+            <p>Permettre aux enfants et aux parents de poser des questions et d’ouvrir la discussion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section future-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Activités à venir</p>
+          <h2>D’autres aventures scientifiques arrivent bientôt.</h2>
+          <p>
+            Tioh Academy prépare des activités pour relier les mathématiques à la vie réelle, à la logique,
+            aux phénomènes naturels et aux questions que les enfants se posent déjà.
+          </p>
+        </div>
+
+        <div class="future-grid">
+          <article class="future-card reveal">
+            <h3>Les mathématiques au quotidien</h3>
+            <p>Budget, cuisine, sport, données, décisions : voir les maths dans la vraie vie.</p>
+          </article>
+          <article class="future-card reveal">
+            <h3>Atelier sur la gravité</h3>
+            <p>Comprendre le mouvement, les planètes et les forces avec des exemples simples.</p>
+          </article>
+          <article class="future-card reveal">
+            <h3>Défi logique en famille</h3>
+            <p>Des jeux de raisonnement pour apprendre ensemble sans pression scolaire.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="impact-strip reveal">
+          <div>
+            <p class="eyebrow">Rester connecté</p>
+            <h2>Suivre Tioh Academy et partager les activités.</h2>
+            <p>
+              Les webinaires, ressources et projets de Tioh Academy sont prolongés par les vidéos, les documents,
+              les publications et la Bourse d’excellence.
+            </p>
+            <div class="activities-socials">
+              <a href="https://www.youtube.com/@tiohacademy" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://www.facebook.com/profile.php?id=100078012906116&locale=fr_CA" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.linkedin.com/in/clotilde-djuikem-8186901a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.tiktok.com/@tiohacademy" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a href="mailto:tiohacademy@gmail.com">Contact</a>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="btn btn-primary" href="index.html#bourse">Découvrir la bourse</a>
+            <a class="btn btn-secondary" href="ressources.html">Voir les ressources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 Tioh Academy — Inspirer • Innover • Orienter</p>
+      <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('is-open');
+      });
+
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('is-visible'));
+    }
+  </script>
+</body>
+</html>
