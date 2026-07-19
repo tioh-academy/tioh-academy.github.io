@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recherche — Tioh Academy</title>
+  <meta name="description" content="Rencontres scientifiques, outils de recherche, résumés, vidéos et présentations PDF proposés par Tioh Academy." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="recherche.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#accueil" aria-label="Accueil Tioh Academy">
+        <span class="brand-mark">T</span>
+        <span>
+          <strong>Tioh Academy</strong>
+          <small>Inspirer • Innover • Orienter</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#missions">Mission</a>
+        <a href="index.html#bourse">Bourse</a>
+        <a href="index.html#impact">Impact</a>
+        <a href="index.html#activites">Activités</a>
+        <a href="ressources.html">Ressources</a>
+        <a class="active" href="recherche.html">Recherche</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="research-hero">
+      <div class="research-orb research-orb-one"></div>
+      <div class="research-orb research-orb-two"></div>
+      <div class="container research-hero-grid">
+        <div class="research-hero-copy reveal">
+          <p class="eyebrow research-eyebrow">Recherche • Modélisation • Outils • Rencontres</p>
+          <h1>Comprendre les idées qui font avancer la recherche.</h1>
+          <p class="research-lead">
+            Une série de présentations et d’entretiens pour rendre accessibles des notions scientifiques importantes,
+            découvrir les méthodes utilisées par les chercheurs et conserver, pour chaque rencontre, une vidéo,
+            un résumé clair et une présentation PDF téléchargeable.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#rencontres">Découvrir les rencontres</a>
+            <a class="btn btn-secondary research-secondary" href="#proposer">Proposer un sujet</a>
+          </div>
+          <div class="research-stat-row" aria-label="Contenu de la page Recherche">
+            <div><strong>1</strong><span>vidéo par sujet</span></div>
+            <div><strong>1</strong><span>résumé accessible</span></div>
+            <div><strong>1</strong><span>PDF téléchargeable</span></div>
+          </div>
+        </div>
+
+        <aside class="research-hero-panel reveal" aria-label="Objectif de la série Recherche">
+          <span class="research-panel-label">L’idée de la série</span>
+          <h2>De la question scientifique aux outils mathématiques.</h2>
+          <p>
+            Chaque invité présente un problème, les concepts essentiels, les équations ou méthodes utiles,
+            puis montre comment ces outils interviennent dans un domaine de recherche concret.
+          </p>
+          <div class="research-process">
+            <span>Question</span><i>→</i><span>Modèle</span><i>→</i><span>Analyse</span><i>→</i><span>Interprétation</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="rencontres" class="section featured-research-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Rencontre à la une</p>
+          <h2>La dynamique transiente : regarder ce qui arrive avant le retour à l’équilibre.</h2>
+          <p>
+            Un système peut être asymptotiquement stable tout en amplifiant fortement une perturbation pendant un temps limité.
+            Cette rencontre montre pourquoi les valeurs propres ne racontent pas toute l’histoire.
+          </p>
+        </div>
+
+        <article class="featured-research-card reveal">
+          <div class="featured-research-visual">
+            <img src="images/recherche/dynamique-transiente.png" alt="Affiche de la présentation sur la dynamique transiente" />
+            <span class="video-duration">Présentation scientifique</span>
+          </div>
+
+          <div class="featured-research-content">
+            <div class="research-meta">
+              <span>Mathématiques appliquées</span>
+              <span>Systèmes dynamiques</span>
+              <span>Niveau progressif</span>
+            </div>
+            <h3>Résilience, réactivité et amplification maximale</h3>
+            <p>
+              Nous partons d’un équilibre et de la linéarisation
+              <strong>\(\dot{x}=Ax\)</strong> pour distinguer trois questions : le système revient-il à l’équilibre,
+              à quelle vitesse y revient-il et peut-il d’abord s’éloigner fortement de cet équilibre ?
+            </p>
+
+            <div class="equation-strip" aria-label="Principales quantités mathématiques étudiées">
+              <div>
+                <span>Résilience</span>
+                <strong>\(\rho=-\alpha(A)\)</strong>
+                <small>avec \(\alpha(A)=\max_i \operatorname{Re}(\lambda_i)\)</small>
+              </div>
+              <div>
+                <span>Réactivité</span>
+                <strong>\(r=\lambda_{\max}\!\left(\frac{A+A^{\mathsf T}}{2}\right)\)</strong>
+                <small>croissance instantanée maximale</small>
+              </div>
+              <div>
+                <span>Amplification</span>
+                <strong>\(G_{\max}=\sup_{t\ge0}\|e^{At}\|_2\)</strong>
+                <small>gain transitoire maximal</small>
+              </div>
+            </div>
+
+            <div class="research-summary-box">
+              <h4>Ce que vous allez comprendre</h4>
+              <ul>
+                <li>Pourquoi un système stable peut malgré tout subir une forte croissance transitoire.</li>
+                <li>Comment les valeurs propres mesurent le comportement asymptotique et la vitesse de retour.</li>
+                <li>Comment la partie symétrique de la matrice détecte la croissance initiale.</li>
+                <li>Comment les valeurs singulières de \(e^{At}\) donnent l’amplification maximale.</li>
+                <li>Pourquoi ces notions sont utiles en épidémiologie, en écologie et en ingénierie.</li>
+              </ul>
+            </div>
+
+            <div class="research-actions">
+              <!-- Remplacer REMPLACER_ID_VIDEO par l'identifiant réel de la vidéo YouTube. -->
+              <a class="btn btn-youtube" href="https://www.youtube.com/watch?v=REMPLACER_ID_VIDEO" target="_blank" rel="noopener noreferrer">▶ Regarder la vidéo</a>
+              <a class="btn btn-download" href="pdfs/recherche/live_stabilite_resilience_tioh.pdf" target="_blank" rel="noopener noreferrer">↓ Télécharger le PDF</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section research-topics-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Prochaines rencontres</p>
+          <h2>Une bibliothèque scientifique appelée à grandir.</h2>
+          <p>
+            Cette structure permet d’ajouter facilement de nouveaux invités, de nouveaux domaines et de nouvelles ressources,
+            tout en gardant le même format : présentation, résumé, vidéo et PDF.
+          </p>
+        </div>
+
+        <div class="research-topic-grid">
+          <article class="research-topic-card reveal">
+            <span class="topic-number">01</span>
+            <span class="topic-status">À venir</span>
+            <div class="topic-icon">🧬</div>
+            <h3>Modélisation mathématique en biologie</h3>
+            <p>Comment transformer un mécanisme biologique en variables, hypothèses et équations analysables.</p>
+            <div class="topic-footer"><span>Invité·e à annoncer</span><span>PDF + vidéo</span></div>
+          </article>
+
+          <article class="research-topic-card reveal">
+            <span class="topic-number">02</span>
+            <span class="topic-status">À venir</span>
+            <div class="topic-icon">📊</div>
+            <h3>Données, incertitude et modèles</h3>
+            <p>Comprendre l’estimation des paramètres, l’identifiabilité et la comparaison entre modèles.</p>
+            <div class="topic-footer"><span>Invité·e à annoncer</span><span>PDF + vidéo</span></div>
+          </article>
+
+          <article class="research-topic-card reveal">
+            <span class="topic-number">03</span>
+            <span class="topic-status">À venir</span>
+            <div class="topic-icon">🤖</div>
+            <h3>Intelligence artificielle pour la recherche</h3>
+            <p>Outils utiles, limites, vérification des résultats et bonnes pratiques pour les chercheurs.</p>
+            <div class="topic-footer"><span>Invité·e à annoncer</span><span>PDF + vidéo</span></div>
+          </article>
+
+          <article class="research-topic-card reveal">
+            <span class="topic-number">04</span>
+            <span class="topic-status">À venir</span>
+            <div class="topic-icon">🧪</div>
+            <h3>Du laboratoire au modèle</h3>
+            <p>Relier observations expérimentales, hypothèses mécanistiques et simulations numériques.</p>
+            <div class="topic-footer"><span>Invité·e à annoncer</span><span>PDF + vidéo</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-method-section">
+      <div class="container research-method-grid">
+        <div class="research-method-copy reveal">
+          <p class="eyebrow light-text">Format de chaque rencontre</p>
+          <h2>Une présentation structurée pour apprendre et réutiliser.</h2>
+          <p>
+            La page ne se limite pas à annoncer un live. Elle transforme chaque intervention en ressource durable,
+            consultable après la diffusion et utilisable par les étudiants, enseignants et jeunes chercheurs.
+          </p>
+        </div>
+
+        <div class="research-method-steps reveal">
+          <article><span>1</span><div><h3>Le problème</h3><p>Présenter la question scientifique et son contexte.</p></div></article>
+          <article><span>2</span><div><h3>Les outils</h3><p>Introduire les concepts, méthodes et équations nécessaires.</p></div></article>
+          <article><span>3</span><div><h3>L’application</h3><p>Montrer un exemple, une simulation ou une étude de cas.</p></div></article>
+          <article><span>4</span><div><h3>Les ressources</h3><p>Conserver la vidéo, le résumé et le PDF téléchargeable.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposer" class="section research-cta-section">
+      <div class="container research-contact-card reveal">
+        <div>
+          <p class="eyebrow">Chercheurs • Doctorants • Professionnels</p>
+          <h2>Vous souhaitez présenter un sujet ou partager un outil de recherche ?</h2>
+          <p>
+            Tioh Academy accueille des interventions accessibles mais rigoureuses dans les domaines des mathématiques,
+            de la modélisation, des données, de l’intelligence artificielle, de la santé et des sciences appliquées.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="mailto:tiohacademy@gmail.com?subject=Proposition%20de%20rencontre%20Recherche%20-%20Tioh%20Academy">Proposer une intervention</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 Tioh Academy — Inspirer • Innover • Orienter</p>
+      <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('is-open');
+      });
+
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => observer.observe(item));
+  </script>
+
+  <!-- MathJax affiche les équations LaTeX dans la page. -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</body>
+</html>
