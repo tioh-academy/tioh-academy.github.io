@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nos activités — Tioh Academy</title>
+  <meta name="description" content="Activités éducatives de Tioh Academy : webinaires, workshops LaTeX, vulgarisation scientifique et ateliers pour apprendre les mathématiques autrement." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --violet-fonce: #22013F;
+      --violet: #5B21B6;
+      --lavande: #F3E8FF;
+      --fond: #FBF7FF;
+      --or: #F4C542;
+      --turquoise: #0EA5A6;
+      --vert: #10B981;
+      --texte: #21152E;
+      --gris: #665B73;
+      --blanc: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      color: var(--texte);
+      background: var(--fond);
+    }
+
+    header {
+      background: var(--blanc);
+      border-bottom: 1px solid rgba(34,1,63,0.08);
+      box-shadow: 0 4px 18px rgba(34,1,63,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.45rem;
+      color: var(--violet-fonce);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav li { margin: 0; padding: 0; }
+
+    nav a {
+      display: inline-block;
+      color: var(--violet-fonce);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--lavande);
+      color: var(--violet);
+    }
+
+    .hero-activities {
+      background:
+        linear-gradient(135deg, rgba(34,1,63,0.92), rgba(91,33,182,0.86)),
+        url('images/hero-activites.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 42px 20px 38px;
+    }
+
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.24);
+      color: var(--or);
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.86rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-activities h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      line-height: 1.12;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    .hero-activities p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .section-title h2 {
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      margin: 0 0 8px;
+    }
+
+    .section-title p {
+      margin: 0 auto;
+      color: var(--gris);
+      line-height: 1.65;
+      max-width: 760px;
+    }
+
+    .bloc {
+      background: white;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(34,1,63,0.08);
+      border: 1px solid rgba(91,33,182,0.08);
+      margin-bottom: 24px;
+    }
+
+    .series-head {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 20px;
+      align-items: center;
+      border-bottom: 1px solid rgba(34,1,63,0.08);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+
+    .series-head h3 {
+      margin: 0 0 8px;
+      color: var(--violet-fonce);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.35rem;
+    }
+
+    .series-head p {
+      margin: 0;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      background: rgba(14,165,166,0.08);
+      border: 1px solid rgba(14,165,166,0.16);
+      color: var(--texte);
+      border-radius: 12px;
+      padding: 9px 11px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .activity-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(91,33,182,0.10);
+      box-shadow: 0 8px 22px rgba(34,1,63,0.06);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      min-height: 100%;
+    }
+
+    .activity-card.full {
+      grid-template-columns: 130px 1fr;
+      grid-column: 1 / -1;
+    }
+
+    .intervenante-photo {
+      background: linear-gradient(135deg, var(--violet-fonce), var(--violet));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+    }
+
+    .intervenante-photo img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--or);
+      background: var(--lavande);
+      display: block;
+    }
+
+    .activity-card.full .intervenante-photo img {
+      width: 96px;
+      height: 96px;
+    }
+
+    .activity-body {
+      padding: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      background: var(--lavande);
+      color: var(--violet);
+    }
+
+    .tag.gold {
+      background: rgba(244,197,66,0.20);
+      color: #7a4b00;
+    }
+
+    .tag.green {
+      background: rgba(16,185,129,0.13);
+      color: #11623d;
+    }
+
+    .activity-body h3 {
+      margin: 0 0 8px;
+      font-family: "Poppins", sans-serif;
+      color: var(--violet-fonce);
+      font-size: 1.2rem;
+    }
+
+    .activity-body p {
+      margin: 0 0 12px;
+      color: var(--gris);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .meta {
+      background: #fbf8ff;
+      border: 1px solid rgba(91,33,182,0.10);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--texte);
+    }
+
+    .intervenante {
+      background: rgba(243,232,255,0.72);
+      border-left: 4px solid var(--or);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin: 12px 0;
+      color: var(--gris);
+      line-height: 1.5;
+      font-size: 0.94rem;
+    }
+
+    .intervenante strong {
+      color: var(--violet-fonce);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--or);
+      color: #2b2304;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 10px 16px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #d9a91e;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: rgba(244,197,66,0.11);
+      border-left: 4px solid var(--or);
+      border-radius: 10px;
+      color: var(--gris);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .archive-card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      border-left: 5px solid var(--violet);
+      box-shadow: 0 8px 22px rgba(34,1,63,0.06);
+    }
+
+    .archive-card h3 {
+      margin: 0 0 8px;
+      color: var(--violet-fonce);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.05rem;
+    }
+
+    .archive-card p {
+      margin: 0;
+      color: var(--gris);
+      line-height: 1.55;
+      font-size: 0.93rem;
+    }
+
+    .cta {
+      margin-top: 28px;
+      background: linear-gradient(135deg, var(--violet-fonce), var(--violet));
+      color: white;
+      border-radius: 20px;
+      text-align: center;
+      padding: 24px 20px;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.35rem;
+    }
+
+    .cta p {
+      margin: 0 auto 14px;
+      color: rgba(255,255,255,0.88);
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--violet-fonce);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      color: var(--gris);
+      border-top: 1px solid rgba(34,1,63,0.08);
+    }
+
+    @media (max-width: 820px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      .series-head,
+      .activity-grid,
+      .archive-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav a {
+        padding: 7px 9px;
+        font-size: 0.86rem;
+      }
+
+      .hero-activities {
+        padding: 34px 16px;
+      }
+
+      .section {
+        padding: 28px 16px;
+      }
+
+      .bloc {
+        padding: 16px;
+      }
+
+      .skill-list {
+        grid-template-columns: 1fr;
+      }
+
+      .activity-card,
+      .activity-card.full {
+        grid-template-columns: 1fr;
+      }
+
+      .intervenante-photo {
+        padding: 18px 18px 0;
+        background: white;
+      }
+
+      .intervenante-photo img {
+        width: 92px;
+        height: 92px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Tioh Academy</h1>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html#missions">Mission</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="activites.html" class="active">Activités</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="recherche.html">Recherche</a></li>
+          <li><a href="bourse.html">Bourse</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-activities">
+    <div class="hero-inner">
+      <div class="eyebrow">🌱 TIOH ACADEMY</div>
+      <h1>Nos activités éducatives</h1>
+      <p>
+        Des webinaires et ateliers pratiques pour apprendre les mathématiques autrement,
+        découvrir les sciences et développer des compétences utiles.
+      </p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="section-title">
+      <h2>Workshops et webinaires</h2>
+      <p>
+        Une page simple pour garder la trace des activités organisées par Tioh Academy.
+      </p>
+    </div>
+
+    <section class="bloc">
+      <div class="activity-grid">
+        <article class="activity-card full" id="taw1">
+          <div class="intervenante-photo">
+            <img src="images/intervenantes/clotilde_djuikem.jpeg" alt="Dr. Clotilde Djuikem">
+          </div>
+
+          <div class="activity-body">
+            <div class="tags">
+              <span class="tag green">Activité passée</span>
+              <span class="tag gold">TAW1</span>
+              <span class="tag">Webinaire enfants</span>
+            </div>
+
+            <h3>🌟 Les pionnières des sciences</h3>
+            <p>
+              Un webinaire pour les enfants et les familles afin de découvrir des femmes scientifiques
+              inspirantes et montrer que la curiosité peut mener vers les STEM.
+            </p>
+
+            <div class="meta-line">
+              <span class="meta">📅 31 octobre 2025</span>
+              <span class="meta">🕒 16h00 GMT</span>
+              <span class="meta">💻 En ligne</span>
+              <span class="meta">🎟 Gratuit</span>
+            </div>
+
+            <div class="intervenante">
+              <strong>Avec Dr. Clotilde Djuikem</strong><br>
+              Fondatrice de Tioh Academy, mathématicienne et chercheuse.
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXNtFnPAZ7CL9iQlbw2U0p4MJKfTzaOCSV3G_324K0WNvIiQ/viewform?usp=header" class="btn" target="_blank" rel="noopener noreferrer">
+              Voir le formulaire
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <div class="series-head">
+        <div>
+          <h3>📐 Série LaTeX avec les LLM</h3>
+          <p>
+            Deux sessions pratiques pour apprendre à utiliser LaTeX efficacement
+            dans la rédaction scientifique.
+          </p>
+        </div>
+
+        <ul class="skill-list">
+          <li>Structurer un document LaTeX et Beamer</li>
+          <li>Gérer les équations mathématiques</li>
+          <li>Insérer figures et tableaux</li>
+          <li>Utiliser intelligemment les outils IA</li>
+        </ul>
+      </div>
+
+      <div class="activity-grid">
+
+        <article class="activity-card" id="taw2">
+          <div class="intervenante-photo">
+            <img src="images/intervenantes/clotilde_djuikem.jpeg" alt="Dr. Clotilde Djuikem">
+          </div>
+
+          <div class="activity-body">
+            <div class="tags">
+              <span class="tag green">Activité passée</span>
+              <span class="tag gold">TAW2</span>
+              <span class="tag">Workshop LaTeX</span>
+            </div>
+
+            <h3>🚀 Workshop LaTeX – TAW2</h3>
+            <p>
+              Deuxième session autour de LaTeX et des LLM pour apprendre à structurer
+              un document scientifique et gagner du temps dans la rédaction.
+            </p>
+
+            <div class="meta-line">
+              <span class="meta">📅 22 février 2026</span>
+              <span class="meta">🕒 19h00 GMT</span>
+              <span class="meta">💻 En ligne</span>
+              <span class="meta">⏳ 2h</span>
+            </div>
+
+            <div class="intervenante">
+              <strong>Avec Dr. Clotilde Djuikem</strong><br>
+              Workshop LaTeX, Beamer, équations, figures, tableaux et outils IA.
+            </div>
+
+            <a href="https://lnkd.in/gDzG6xdK" class="btn" target="_blank" rel="noopener noreferrer">
+              Voir le lien d’inscription
+            </a>
+          </div>
+        </article>
+
+        <article class="activity-card" id="taw3">
+          <div class="intervenante-photo">
+            <img src="images/intervenantes/cynthia_lena_ndjimi.jpg" alt="Cynthia Lena Ndjimi">
+          </div>
+
+          <div class="activity-body">
+            <div class="tags">
+              <span class="tag green">Activité passée</span>
+              <span class="tag gold">TAW3</span>
+              <span class="tag">Workshop LaTeX</span>
+            </div>
+
+            <h3>🚀 Workshop LaTeX – TAW3</h3>
+            <p>
+              Une nouvelle session pratique pour apprendre rapidement LaTeX avec les LLM,
+              avec un accent sur la rédaction scientifique.
+            </p>
+
+            <div class="meta-line">
+              <span class="meta">📅 29 mars 2026</span>
+              <span class="meta">🕒 16h00 GMT</span>
+              <span class="meta">💻 En ligne</span>
+              <span class="meta">⏳ 2h</span>
+            </div>
+
+            <div class="intervenante">
+              <strong>Avec Cynthia Lena Ndjimi</strong><br>
+              Workshop LaTeX, Beamer, équations, figures, tableaux et outils IA.
+            </div>
+
+            <a href="https://lnkd.in/guh6CATs" class="btn" target="_blank" rel="noopener noreferrer">
+              Voir le lien d’inscription
+            </a>
+
+            <div class="note">
+              Après inscription, le lien de connexion est envoyé par e-mail.
+              Vérifiez votre boîte de réception et vos spams.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Archives des activités</h2>
+        <p>
+          Les anciennes activités restent visibles pour montrer l’évolution des ateliers et webinaires.
+        </p>
+      </div>
+
+      <div class="archive-grid">
+        <div class="archive-card">
+          <h3>TAW1 — Pionnières des sciences</h3>
+          <p>Webinaire d’inspiration avec Dr. Clotilde Djuikem.</p>
+        </div>
+
+        <div class="archive-card">
+          <h3>TAW2 — LaTeX avec les LLM</h3>
+          <p>Workshop LaTeX avec Dr. Clotilde Djuikem.</p>
+        </div>
+
+        <div class="archive-card">
+          <h3>TAW3 — Workshop LaTeX</h3>
+          <p>Workshop LaTeX avec Cynthia Lena Ndjimi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Proposer ou soutenir une activité</h2>
+      <p>
+        Vous souhaitez proposer un atelier, accompagner une session ou soutenir une action éducative de Tioh Academy ?
+      </p>
+      <a href="index.html#contact" class="btn">Nous contacter</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Tioh Academy — Inspirer • Innover • Orienter</p>
+  </footer>
+
+</body>
+</html>
