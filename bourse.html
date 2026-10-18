@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les 40 lauréats 2026 — Bourse Tioh Academy</title>
+  <meta name="description" content="Découvrez les 40 lauréats de la Bourse d’excellence Tioh Academy 2026 : 20 filles et 20 garçons de 13 pays. Liste par pays, partenaires et annonce officielle en PDF." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+/* Résultats de la Bourse Tioh Academy 2026. Styles limités à cette page. */
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+.laureats-section { background: #fcfaff; }
+.laureats-section .section-heading { max-width: 850px; }
+.laureats-section .section-heading h2 { color: #32154c; }
+.laureats-tools { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(180px,1fr) auto; gap: 18px; align-items: end; padding: 22px; background: #fff; border: 1px solid #e4d9f0; border-radius: 16px; margin: 28px 0 16px; }
+.laureats-tools label { display: block; font-weight: 700; font-size: .9rem; margin-bottom: 8px; color: #35194b; }
+.laureats-tools input,.laureats-tools select { width: 100%; min-height: 48px; padding: 11px 13px; border: 1px solid #bdabcd; border-radius: 8px; color: #30203b; background: #fff; font: inherit; box-sizing: border-box; }
+.laureats-tools :is(input,select,button):focus-visible,.laureats-section a:focus-visible { outline: 3px solid #a67be3; outline-offset: 3px; }
+.laureats-reset { min-height: 48px; border: 1px solid #69438d; background: #fff; color: #50267b; cursor: pointer; }
+.laureats-result-count { color: #5b21b6; font-weight: 700; }
+.laureats-explanation { color: #6b5c78; font-size: .9rem; margin-bottom: 26px; }
+.laureats-countries { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; align-items: start; }
+.laureats-country { border: 1px solid #ddcce9; border-radius: 14px; background: #fff; overflow: hidden; box-shadow: 0 5px 20px rgba(53,24,84,.04); }
+.laureats-country-heading { padding: 20px 20px 15px; background: #f2eafa; border-bottom: 3px solid #d8ab40; }
+.laureats-country-heading h3 { margin: 0 0 6px; color: #421b69; font-size: 1.18rem; line-height: 1.5; }
+.laureats-country-heading h3 span { display: block; color: #6b557d; font-size: .78rem; font-weight: 500; }
+.laureats-country-heading p { margin: 0; font-size: .82rem; color: #6b557d; }
+.laureats-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .86rem; }
+.laureats-table thead { color: #fff; background: #5b21b6; }
+.laureats-table :is(th,td) { text-align: left; padding: 12px 13px; vertical-align: top; border-right: 1px solid #e8dff0; border-bottom: 1px solid #e8dff0; line-height: 1.6; overflow-wrap: anywhere; }
+.laureats-table thead th:first-child { width: 48px; }
+.laureats-table thead th:last-child { width: 78px; }
+.laureats-table tbody th { font-weight: 500; color: #30203b; }
+.laureats-table tbody tr:nth-child(even) { background: #faf6fd; }
+.laureat-rank { font-weight: 700; color: #5b21b6; }
+.laureats-empty { padding: 28px; background: #fff; border: 1px solid #e4d9f0; border-radius: 12px; }
+.laureats-download { margin-top: 32px; padding: 26px; border: 1px solid #e2d4ef; border-radius: 14px; background: #fff; display: flex; align-items: center; gap: 22px; justify-content: space-between; }
+.laureats-download p { margin: 0; max-width: 520px; }
+.laureats-download .btn { flex-shrink: 0; background: #5b21b6; color: #fff; }
+.scholarship-sponsors-section .sponsors-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; align-items: stretch; }
+.scholarship-sponsors-section .sponsor-logo { margin: 0; padding: 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; border: 1px solid #e4d9f0; border-radius: 14px; background: #fff; min-height: 156px; height: auto; }
+.scholarship-sponsors-section .sponsor-logo img { object-fit: contain; max-width: 100%; width: 160px; height: 80px; }
+.scholarship-sponsors-section figcaption { color: #422958; font-size: .84rem; font-weight: 700; text-align: center; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+@media(max-width:960px) { .laureats-countries { grid-template-columns: 1fr; } .laureats-download { align-items: flex-start; flex-direction: column; } .laureats-tools { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } .laureats-reset { grid-column: 1 / -1; } }
+@media(max-width:600px) { .laureats-tools { grid-template-columns: 1fr; padding: 16px; gap: 15px; } .laureats-hero h1 { font-size: clamp(2rem,9vw,3rem); } .laureats-country-heading { padding: 16px; } .laureats-table { font-size: .79rem; } .laureats-table :is(th,td) { padding: 10px 8px; } .laureats-table thead th:first-child { width: 39px; } .laureats-table thead th:last-child { width: 66px; } .scholarship-sponsors-section .sponsors-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .scholarship-sponsors-section .sponsor-logo { padding: 13px; min-height: 140px; } .laureats-download { padding: 20px; } .laureats-download .btn { width: 100%; text-align: center; white-space: normal; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .reveal { transition: none; transform: none; opacity: 1; } }
+@media print { .site-header,.site-footer,.laureats-tools,.laureats-download,.scholarship-page-hero~section:not(.laureats-section):not(.scholarship-sponsors-section) { display:none!important; } .laureats-countries { display:block; } .laureats-country { break-inside:avoid; margin-bottom:20px; box-shadow:none; } .reveal { opacity:1; transform:none; } }
+
+  </style>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.laureats-tools{display:none!important}</style></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#missions" aria-label="Mission Tioh Academy">
+        <span class="brand-mark">T</span>
+        <span>
+          <strong>Tioh Academy</strong>
+          <small>Inspirer • Innover • Orienter</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#missions">Mission</a>
+        <a href="impact.html">Impact</a>
+        <a href="activites.html">Activités</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="recherche.html">Recherche</a>
+        <a class="active" href="bourse.html">Bourse</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="scholarship-page-hero laureats-hero">
+      <div class="scholarship-orb scholarship-orb-one" aria-hidden="true"></div>
+      <div class="scholarship-orb scholarship-orb-two" aria-hidden="true"></div>
+      <div class="container scholarship-page-grid">
+        <div class="scholarship-page-copy">
+          <p class="eyebrow light-text">Bourse d’excellence · Première édition · 2026</p>
+          <h1>Félicitations à nos 40 lauréats !</h1>
+          <p class="scholarship-page-lead">20 filles et 20 garçons de 13 pays d’Afrique francophone. Nous célébrons leurs efforts, leurs parcours et leur ambition scientifique.</p>
+          <div class="scholarship-actions">
+            <a class="btn btn-gold" href="#laureats">Découvrir les lauréats</a>
+            <a class="btn btn-white" href="pdfs/Laureats_Bourse_Tioh_Academy_2026_Annonce_officielle.pdf" download>Télécharger l’annonce officielle (PDF)</a>
+          </div>
+          <p class="scholarship-free-note">Édition 2026 : candidatures closes. Merci aux 367 candidates et candidats pour leur confiance.</p>
+        </div>
+        <aside class="scholarship-card scholarship-summary-card" aria-label="Résultats de l’édition 2026">
+          <span class="badge badge-gold">Les résultats sont disponibles</span>
+          <h2>L’édition 2026 en chiffres</h2>
+          <div class="scholarship-key-stats">
+            <div><strong>40</strong><span>lauréats</span></div>
+            <div><strong>50 %</strong><span>de filles et 50 % de garçons</span></div>
+            <div><strong>13</strong><span>pays représentés parmi les lauréats</span></div>
+          </div>
+          <div class="scholarship-date-box"><span>Montant de la bourse</span><strong>50 000 FCFA par lauréat</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="laureats" class="section laureats-section" aria-labelledby="laureats-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Les résultats · Édition 2026</p><h2 id="laureats-title">Découvrez les 40 lauréats.</h2><p>Les lauréats sont présentés par pays, dans l’ordre de mérite. La numérotation recommence à 1 dans chaque pays.</p></div>
+        <div class="laureats-tools" role="search" aria-label="Rechercher un lauréat">
+          <div><label for="laureat-search">Rechercher un nom</label><input id="laureat-search" type="search" placeholder="Nom ou prénom…" autocomplete="off"></div>
+          <div><label for="laureat-country">Choisir un pays</label><select id="laureat-country"><option value="">Tous les pays</option><option value="Bénin">Bénin</option><option value="Burkina Faso">Burkina Faso</option><option value="Cameroun">Cameroun</option><option value="Comores">Comores</option><option value="Congo (RC)">Congo (RC)</option><option value="Congo (RDC)">Congo (RDC)</option><option value="Côte d’Ivoire">Côte d’Ivoire</option><option value="Gabon">Gabon</option><option value="Guinée">Guinée</option><option value="Niger">Niger</option><option value="Sénégal">Sénégal</option><option value="Tchad">Tchad</option><option value="Togo">Togo</option></select></div>
+          <button id="laureat-reset" class="btn laureats-reset" type="button">Réinitialiser</button>
+        </div>
+        <p id="laureat-result-count" class="laureats-result-count" aria-live="polite" aria-atomic="true">40 lauréats · 13 pays</p>
+        <p class="laureats-explanation">Le nombre indiqué entre parenthèses correspond à tous les dossiers complets enregistrés dans le pays.</p>
+        <div class="laureats-countries"><article class="laureats-country" data-country="Bénin">
+          <header class="laureats-country-heading"><h3>Bénin <span>(101 dossiers complets)</span></h3><p>9 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Bénin, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="balogoun dany alexandre"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">BALOGOUN Dany Alexandre</th><td>Masculin</td></tr><tr data-search="agbossaga houefa merveille don de dieu"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">AGBOSSAGA Houéfa Merveille Don de Dieu</th><td>Féminin</td></tr><tr data-search="avocetien alicia kimora anike selia"><td class="laureat-rank">3</td><th scope="row" class="laureat-name">AVOCETIEN Alicia Kimora Anikè Sèlia</th><td>Féminin</td></tr><tr data-search="todjinou akohoundje ange pierre claver tresor senan codjo"><td class="laureat-rank">4</td><th scope="row" class="laureat-name">TODJINOU AKOHOUNDJE Ange Pierre Claver Trésor Sènan Codjo</th><td>Masculin</td></tr><tr data-search="gbenou olouwafemi richmi"><td class="laureat-rank">5</td><th scope="row" class="laureat-name">GBENOU Olouwafèmi Richmi</th><td>Féminin</td></tr><tr data-search="toni idane noor arao"><td class="laureat-rank">6</td><th scope="row" class="laureat-name">TONI Idane Noor Arao</th><td>Féminin</td></tr><tr data-search="atchatin gloria wanignon ursula"><td class="laureat-rank">7</td><th scope="row" class="laureat-name">ATCHATIN Gloria Wanignon Ursula</th><td>Féminin</td></tr><tr data-search="gbaguidi mahounan cynthia"><td class="laureat-rank">8</td><th scope="row" class="laureat-name">GBAGUIDI Mahounan Cynthia</th><td>Féminin</td></tr><tr data-search="soumanou nafissath aweni titilayo"><td class="laureat-rank">9</td><th scope="row" class="laureat-name">SOUMANOU Nafissath Awèni Titilayo</th><td>Féminin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Burkina Faso">
+          <header class="laureats-country-heading"><h3>Burkina Faso <span>(47 dossiers complets)</span></h3><p>5 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Burkina Faso, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="kiemtore rachida yasmine"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">KIEMTORE Rachida Yasmine</th><td>Féminin</td></tr><tr data-search="ouedraogo tinbnoma pascaline"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">OUEDRAOGO Tinbnoma Pascaline</th><td>Féminin</td></tr><tr data-search="kabre imane faidata"><td class="laureat-rank">3</td><th scope="row" class="laureat-name">KABRE Imane Faïdata</th><td>Féminin</td></tr><tr data-search="younga wendyida leylatou"><td class="laureat-rank">4</td><th scope="row" class="laureat-name">YOUNGA Wendyida Leylatou</th><td>Féminin</td></tr><tr data-search="drabo maissour tiemoko goumanou"><td class="laureat-rank">5</td><th scope="row" class="laureat-name">DRABO Maïssour Tiémoko Goumanou</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Cameroun">
+          <header class="laureats-country-heading"><h3>Cameroun <span>(107 dossiers complets)</span></h3><p>10 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Cameroun, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="tsamene kenne divin"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">TSAMENE KENNE Divin</th><td>Masculin</td></tr><tr data-search="melingui abeng raphael"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">MELINGUI ABENG Raphael</th><td>Masculin</td></tr><tr data-search="tatchum tegueu christ benoit"><td class="laureat-rank">3</td><th scope="row" class="laureat-name">TATCHUM TEGUEU Christ Benoît</th><td>Masculin</td></tr><tr data-search="nguegang matsinguia ludivine"><td class="laureat-rank">4</td><th scope="row" class="laureat-name">NGUEGANG MATSINGUIA Ludivine</th><td>Féminin</td></tr><tr data-search="tchapda michel"><td class="laureat-rank">5</td><th scope="row" class="laureat-name">TCHAPDA Michel</th><td>Masculin</td></tr><tr data-search="petzeponi djubgang uriel"><td class="laureat-rank">6</td><th scope="row" class="laureat-name">PETZEPONI DJUBGANG Uriel</th><td>Masculin</td></tr><tr data-search="kamga marie lise"><td class="laureat-rank">7</td><th scope="row" class="laureat-name">KAMGA Marie Lise</th><td>Féminin</td></tr><tr data-search="alongamo nkendji ornelle albertine"><td class="laureat-rank">8</td><th scope="row" class="laureat-name">ALONGAMO NKENDJI Ornelle Albertine</th><td>Féminin</td></tr><tr data-search="ngueukam emegam grace"><td class="laureat-rank">9</td><th scope="row" class="laureat-name">NGUEUKAM EMEGAM Grâce</th><td>Féminin</td></tr><tr data-search="pigoue nana adielle"><td class="laureat-rank">10</td><th scope="row" class="laureat-name">PIGOUE NANA Adielle</th><td>Féminin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Comores">
+          <header class="laureats-country-heading"><h3>Comores <span>(14 dossiers complets)</span></h3><p>2 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Comores, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="madi zakaria"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">MADI Zakaria</th><td>Masculin</td></tr><tr data-search="abdoulhalim maoulida ali mlanaoindrou"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">Abdoulhalim MAOULIDA ALI MLANAOINDROU</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Congo (RC)">
+          <header class="laureats-country-heading"><h3>Congo (RC) <span>(3 dossiers complets)</span></h3><p>1 lauréat</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Congo (RC), dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="bobassa pea melsa meliane"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">BOBASSA PEA Melsa Meliane</th><td>Féminin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Congo (RDC)">
+          <header class="laureats-country-heading"><h3>Congo (RDC) <span>(15 dossiers complets)</span></h3><p>2 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Congo (RDC), dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="nshokano fabrice"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">NSHOKANO Fabrice</th><td>Masculin</td></tr><tr data-search="rosine aziza"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">Rosine AZIZA</th><td>Féminin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Côte d’Ivoire">
+          <header class="laureats-country-heading"><h3>Côte d’Ivoire <span>(9 dossiers complets)</span></h3><p>2 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Côte d’Ivoire, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="niampa mass&#x27;oud"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">NIAMPA Mass&#x27;oud</th><td>Masculin</td></tr><tr data-search="coulibaly aboudou"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">COULIBALY Aboudou</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Gabon">
+          <header class="laureats-country-heading"><h3>Gabon <span>(3 dossiers complets)</span></h3><p>1 lauréat</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Gabon, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="bissielo marc gaetan"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">BISSIELO Marc Gaëtan</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Guinée">
+          <header class="laureats-country-heading"><h3>Guinée <span>(6 dossiers complets)</span></h3><p>1 lauréat</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Guinée, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="loua alexandre"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">LOUA Alexandre</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Niger">
+          <header class="laureats-country-heading"><h3>Niger <span>(9 dossiers complets)</span></h3><p>1 lauréat</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Niger, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="ismael mahamadou moustapha mouhamed"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">ISMAEL Mahamadou Moustapha Mouhamed</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Sénégal">
+          <header class="laureats-country-heading"><h3>Sénégal <span>(6 dossiers complets)</span></h3><p>1 lauréat</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Sénégal, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="mouhamadou mourtada lo"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">Mouhamadou Mourtada LO</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Tchad">
+          <header class="laureats-country-heading"><h3>Tchad <span>(10 dossiers complets)</span></h3><p>2 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Tchad, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="menodji teube sonia"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">MENODJI TEUBE Sonia</th><td>Féminin</td></tr><tr data-search="dolah hadoura alphonse"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">DOLAH HADOURA Alphonse</th><td>Masculin</td></tr></tbody></table></div>
+        </article>
+<article class="laureats-country" data-country="Togo">
+          <header class="laureats-country-heading"><h3>Togo <span>(34 dossiers complets)</span></h3><p>3 lauréats</p></header>
+          <div class="laureats-table-wrap"><table class="laureats-table"><caption class="sr-only">Lauréats de Togo, dans l’ordre de mérite</caption><thead><tr><th scope="col">Rang</th><th scope="col">Nom et prénom(s)</th><th scope="col">Sexe</th></tr></thead><tbody><tr data-search="kponhoenou adjo edith"><td class="laureat-rank">1</td><th scope="row" class="laureat-name">KPONHOENOU Adjo Édith</th><td>Féminin</td></tr><tr data-search="tchogli ayefouni magloire"><td class="laureat-rank">2</td><th scope="row" class="laureat-name">TCHOGLI Ayéfouni Magloire</th><td>Masculin</td></tr><tr data-search="niwou yao francois"><td class="laureat-rank">3</td><th scope="row" class="laureat-name">NIWOU Yao François</th><td>Masculin</td></tr></tbody></table></div>
+        </article></div>
+        <p id="laureat-empty" class="laureats-empty" hidden>Aucun lauréat ne correspond à votre recherche. Vérifiez le nom ou réinitialisez les filtres.</p>
+        <div class="laureats-download"><p>Conservez et partagez la liste officielle, accompagnée de nos remerciements aux partenaires.</p><a class="btn btn-purple" href="pdfs/Laureats_Bourse_Tioh_Academy_2026_Annonce_officielle.pdf" download>Télécharger la liste complète (PDF)</a></div>
+      </div>
+    </section>
+
+
+   <section class="section scholarship-sponsors-section">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">Merci à nos sponsors et partenaires</p>
+
+      <h2>Une première édition rendue possible ensemble.</h2>
+
+      <p>
+        À Master Oil, ASA, Sitchom Équipements, Éclat Bénin, Kamer IA, Wazi Consulting et DG Inter SARL : merci pour votre confiance et votre engagement. Votre soutien contribue à accompagner de jeunes talents et à encourager leur ambition scientifique.
+      </p>
+    </div>
+
+    <div class="sponsors-grid reveal">
+
+      <figure class="sponsor-logo"><img src="images/sponsors/master_oil.png" alt="Master Oil" loading="lazy" decoding="async"><figcaption>Master Oil</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/asa.png" alt="ASA — Association Sciences pour l’Afrique" loading="lazy" decoding="async"><figcaption>ASA — Association Sciences pour l’Afrique</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/sitchom.png" alt="Sitchom Équipements" loading="lazy" decoding="async"><figcaption>Sitchom Équipements</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/eclat_benin.png" alt="Éclat Bénin" loading="lazy" decoding="async"><figcaption>Éclat Bénin</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/kamer_ia_dark.png" alt="Kamer IA" loading="lazy" decoding="async"><figcaption>Kamer IA</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/wazi.png" alt="Wazi Consulting" loading="lazy" decoding="async"><figcaption>Wazi Consulting</figcaption></figure>
+
+      <figure class="sponsor-logo"><img src="images/sponsors/dg_inter.png" alt="DG Inter SARL" loading="lazy" decoding="async"><figcaption>DG Inter SARL</figcaption></figure>
+
+    </div>
+
+  </div>
+</section>
+
+    <section class="section scholarship-intro-section">
+      <div class="container scholarship-content-grid">
+        <div class="scholarship-story reveal">
+          <p class="eyebrow">Pourquoi cette bourse ?</p>
+          <h2>Reconnaître l’effort et réduire les obstacles au passage vers le supérieur.</h2>
+          <p>
+            Les frais de dossiers, de concours, d’inscription, de transport, de fournitures ou d’installation
+            peuvent fragiliser la transition après le secondaire. La bourse apporte une aide financière et symbolique
+            au moment où les élèves préparent la suite de leur parcours.
+          </p>
+          <ul class="check-list scholarship-check-list">
+            <li>Récompenser l’excellence en mathématiques et la régularité.</li>
+            <li>Encourager un projet académique et professionnel clair.</li>
+            <li>Soutenir les élèves à l’entrée en Terminale et les nouveaux bacheliers dans leur transition vers l’enseignement supérieur.</li>
+            <li>Valoriser le mérite et l’ambition scientifique à l’échelle de l’Afrique francophone.</li>
+          </ul>
+        </div>
+        <aside class="female-excellence-card reveal">
+          <span class="scholarship-card-kicker">Excellence féminine</span>
+          <h3>Une attention particulière aux filles en sciences.</h3>
+          <p>
+            Soutenir les filles ne signifie pas exclure les garçons : l’objectif est de contribuer à corriger un déséquilibre.
+            Une attention particulière est portée à l’excellence féminine dans les filières scientifiques,
+            sous réserve de la qualité des dossiers.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section scholarship-founder-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">La fondatrice</p>
+          <h2>Une trajectoire scientifique tournée vers la transmission.</h2>
+        </div>
+
+        <article class="scholarship-info-card reveal">
+          <h3>Dre Clotilde Djuikem</h3>
+          <p>
+            Chercheuse en mathématiques appliquées, enseignante, médiatrice et communicatrice scientifique,
+            la Dre Clotilde Djuikem a construit son parcours entre le Cameroun, la France et le Canada.
+            Après ses études au Cameroun, soutenues notamment par une bourse présidentielle, elle poursuit
+            un doctorat en mathématiques en France, puis un postdoctorat en recherche à l’Université du Manitoba au Canada.
+          </p>
+          <p>
+            En 2020, elle fonde Tioh Academy afin de rendre les mathématiques plus accessibles, plus proches
+            des réalités des apprenants et plus utiles pour construire des parcours solides. Depuis 2013,
+            elle accompagne et encourage les jeunes, avec une attention particulière portée aux filles dans les filières scientifiques.
+          </p>
+          <p>
+            La Bourse d’excellence Tioh Academy prolonge cette démarche : transformer une communauté éducative
+            en un soutien concret pour des élèves méritants, avec l’ambition, à plus long terme, de contribuer aussi au financement de la recherche.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section scholarship-eligibility-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Éligibilité</p>
+          <h2>Qui peut candidater ?</h2>
+          <p>La première édition s’adresse aux élèves et nouveaux bacheliers scolarisés dans un pays d’Afrique francophone, selon deux profils : entrée en Terminale scientifique ou équivalent, ou entrée en première année d’études supérieures à dominante scientifique à la rentrée 2026-2027.</p>
+        </div>
+
+        <div class="scholarship-two-columns">
+          <article class="scholarship-info-card reveal">
+            <span class="icon">🎓</span>
+            <h3>Conditions</h3>
+            <ul class="scholarship-list">
+              <li>Entrer en Terminale scientifique ou équivalent à la rentrée 2026-2027, ou avoir obtenu en 2026 un baccalauréat scientifique ou diplôme équivalent et entrer en BAC+1 dans une formation à dominante scientifique.</li>
+              <li>Être scolarisé(e) dans l’un des 22 pays d’Afrique francophone éligibles.</li>
+              <li>Présenter un bon dossier en mathématiques et dans les matières scientifiques.</li>
+              <li>Fournir les bulletins et relevés de notes correspondant à son profil.</li>
+              <li>Présenter une motivation et un projet d’études ou professionnel clair.</li>
+              <li>Fournir une lettre de recommandation signée par un enseignant, avec son adresse e-mail.</li>
+              <li>Fournir une pièce d’identité ou une preuve de scolarité.</li>
+              <li>Accepter un court entretien en cas de présélection.</li>
+            </ul>
+          </article>
+
+          <article class="scholarship-info-card reveal">
+            <span class="icon">🌍</span>
+            <h3>Systèmes scolaires pris en compte</h3>
+            <ul class="scholarship-list">
+              <li><strong>Filières concernées :</strong> Terminale C, D, E, TI ou filière scientifique équivalente.</li>
+              <li><strong>Nouveaux bacheliers :</strong> Baccalauréat C, D, E, TI ou diplôme scientifique équivalent obtenu en 2026.</li>
+              <li><strong>RDC :</strong> options Math-Physique / Biochimie et diplômes scientifiques équivalents.</li>
+              <li><strong>Système anglophone :</strong> A Level scientifique ou équivalent.</li>
+              <li>Les équivalences propres aux systèmes éducatifs des pays éligibles sont prises en compte.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scholarship-application-section">
+      <div class="container scholarship-application-grid">
+        <div class="reveal">
+          <p class="eyebrow light-text">Dossier de candidature</p>
+          <h2>Préparez vos pièces avant d’ouvrir le formulaire.</h2>
+          <p>Chaque pièce est envoyée séparément afin de faciliter l’étude du dossier.</p>
+        </div>
+        <div class="application-docs reveal">
+          <article><span>1</span><p>Formulaire de candidature dûment rempli.</p></article>
+          <article><span>2</span><p>Bulletins scolaires : Première, Seconde et Troisième pour les candidats entrant en Terminale ; Terminale, Première et Seconde pour les candidats entrant en BAC+1.</p></article>
+          <article><span>3</span><p>Relevé de l’examen national correspondant au parcours : BEPC, Probatoire, Examen d’État, Baccalauréat ou diplôme équivalent.</p></article>
+          <article><span>4</span><p>Pièce d’identité ou preuve de scolarité.</p></article>
+          <article><span>5</span><p>Lettre de recommandation signée par un enseignant, avec son adresse e-mail.</p></article>
+          <article><span>6</span><p>Présentation de la motivation et du projet d’études ou professionnel.</p></article>
+          <article><span>7</span><p>Pour les candidats entrant en BAC+1 : preuve d’admission ou d’inscription dans un établissement supérieur, si elle est déjà disponible.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scholarship-selection-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sélection & calendrier</p>
+          <h2>Un processus simple, transparent et traçable.</h2>
+          <p>
+            Les résultats scolaires comptent, mais aussi la régularité, la progression, la motivation et la cohérence du projet.
+            Trois jurys ont évalué les dossiers, puis les entretiens ont complété la sélection.
+          </p>
+        </div>
+
+        <div class="scholarship-process reveal" aria-label="Processus de sélection">
+          <span>Candidature</span><i>→</i><span>Vérification</span><i>→</i><span>Notation</span><i>→</i><span>Entretiens</span><i>→</i><span>Délibération</span><i>→</i><span>Lauréats</span>
+        </div>
+
+        <div class="scholarship-calendar reveal">
+          <div><strong>3 août</strong><span>Lancement de l’appel</span></div>
+          <div><strong>3 août - 16 sept.</strong><span>Candidatures</span></div>
+          <div><strong>20 - 30 sept.</strong><span>Évaluation des dossiers</span></div>
+          <div><strong>14 - 18 oct.</strong><span>Entretiens et rattrapage</span></div>
+          <div><strong>18 oct.</strong><span>Délibération finale</span></div>
+          <div><strong>18 oct.</strong><span>Annonce des 40 lauréats</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scholarship-governance-section">
+      <div class="container scholarship-two-columns">
+        <article class="scholarship-info-card reveal">
+          <span class="icon">🛡️</span>
+          <h3>Gouvernance & transparence</h3>
+          <ul class="scholarship-list">
+            <li>Critères publiés à l’avance.</li>
+            <li>Traitement équitable et confidentialité des données.</li>
+            <li>Traçabilité des décisions.</li>
+            <li>Communication fondée sur les montants effectivement reçus.</li>
+            <li>Publication d’un bilan à la fin de l’édition.</li>
+          </ul>
+        </article>
+
+        <article class="fraud-warning-card reveal">
+          <span class="scholarship-card-kicker">À retenir</span>
+          <h3>La candidature est gratuite.</h3>
+          <p><strong>Attention aux fraudes :</strong> Tioh Academy ne demande jamais d’argent pour candidater ou pour recevoir une bourse.</p>
+          <a href="mailto:tiohacademy@gmail.com">Signaler un doute : tiohacademy@gmail.com</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section scholarship-final-cta"><div class="container scholarship-final-card"><div><p class="eyebrow light-text">Édition 2026</p><h2>Félicitations aux lauréats et merci à tous les candidats.</h2><p>Pour toute question sur la suite du processus, contactez le comité Tioh Academy.</p></div><div class="scholarship-final-actions"><a class="btn btn-gold" href="#laureats">Voir les lauréats</a><a class="btn btn-white" href="mailto:tiohacademy@gmail.com">Contacter le comité</a></div></div></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 Tioh Academy — Inspirer • Innover • Orienter</p>
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('is-open');
+      });
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 }) : null;
+    revealItems.forEach(item => observer ? observer.observe(item) : item.classList.add('is-visible'));
+  </script>
+  <script>
+(() => {
+  const search = document.getElementById('laureat-search');
+  const select = document.getElementById('laureat-country');
+  const reset = document.getElementById('laureat-reset');
+  const counter = document.getElementById('laureat-result-count');
+  const empty = document.getElementById('laureat-empty');
+  const cards = Array.from(document.querySelectorAll('.laureats-country'));
+  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  function filter() {
+    const query = normalize(search.value);
+    let total = 0, countries = 0;
+    cards.forEach(card => {
+      const countryMatches = !select.value || card.dataset.country === select.value;
+      let visible = 0;
+      card.querySelectorAll('tbody tr').forEach(row => {
+        const match = countryMatches && (!query || normalize(row.querySelector('.laureat-name').textContent).includes(query));
+        row.hidden = !match;
+        if (match) visible++;
+      });
+      card.hidden = visible === 0;
+      if (visible) { total += visible; countries++; }
+    });
+    counter.textContent = `${total} ${total === 1 ? 'lauréat' : 'lauréats'} · ${countries} pays`;
+    empty.hidden = total !== 0;
+  }
+  search.addEventListener('input', filter);
+  select.addEventListener('change', filter);
+  reset.addEventListener('click', () => { search.value = ''; select.value = ''; filter(); search.focus(); });
+})();
+
+  </script>
+</body>
+</html>
